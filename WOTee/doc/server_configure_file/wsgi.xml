@@ -1,0 +1,11 @@
+
+<uwsgi>
+    <uid>tobin</uid>
+    <plugin>python</plugin>
+    <socket>127.0.0.1:9000</socket>
+    <master>true</master>
+    <enable-threads>true</enable-threads>
+
+    <pythonpath>/home/tobin/Documents/WOTee</pythonpath>
+    <module>www.wsgi</module>
+</uwsgi>

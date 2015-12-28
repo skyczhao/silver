@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Cartoon Face</title>
+    <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'wotee/css/common.css' %}" />
+</head>
+<body>
+    <!--header title-->
+    <header class="collapse navbar-collapse bg-primary text-center">
+        <a class="white" href="index"><h1><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Auto Cartoon Face</h1></a>
+    </header>
+
+    <!--main content-->
+    <article class="clear text-center">
+        <div class="col-80 center-block">
+            <!--step navigation-->
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="index">Upload</a></li>
+                <li role="presentation" class="active"><a href="result">Result</a></li>
+            </ul>
+            <!--preview image window-->
+            <p>
+                <img id="origin" class="img-rounded img-rect-360" src="{{ origin }}" alt="Origin Image" />
+                <img id="result" class="img-rounded img-rect-360" src="{{ result }}" alt="Result Image" />
+            </p>
+        </div>
+    </article>
+
+    <!--footer message-->
+    <footer class="clear text-muted text-center">
+        Copyright &copy 2015 Tobin. All rights reserved.
+    </footer>
+</body>
+</html>

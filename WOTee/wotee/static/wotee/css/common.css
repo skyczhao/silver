@@ -1,0 +1,29 @@
+
+.clear {
+    clear: both;
+}
+
+.white {
+    color: #FFF;
+}
+
+.black {
+    color: #000;
+}
+
+.col-80 {
+    width: 80%;
+}
+
+.col-60 {
+    width: 60%;
+}
+
+.img-rect-360 {
+    width: 360px;
+    height: 360px;
+}
+
+footer {
+    margin-top: 25px;
+}

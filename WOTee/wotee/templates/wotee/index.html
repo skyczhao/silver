@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Cartoon Face</title>
+    <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'wotee/css/common.css' %}" />
+    <link rel="stylesheet" href="{% static 'wotee/css/index.css' %}" />
+</head>
+<body>
+    <!--header title-->
+    <header class="collapse navbar-collapse bg-primary text-center">
+        <a class="white" href="index"><h1><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Auto Cartoon Face</h1></a>
+    </header>
+
+    <!--main content-->
+    <article class="clear text-center">
+        <div class="col-80 center-block">
+            <!--step navigation-->
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="index">Upload</a></li>
+                <li role="presentation"><a href="result">Result</a></li>
+            </ul>
+            <!--tips-->
+            <p id="message">click preview window to select image</p>
+            <!--preview image window-->
+            <p><img id="preview" class="img-rounded img-rect-360" src="{% static 'wotee/img/img-rect-360.png' %}" alt="Image Preview" /></p>
+            <!--submit form-->
+            <form action="result" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input id="image" class="center-block hidden" type="file" name="image" accept="image/*" capture="camera" />
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+    </article>
+
+    <!--footer message-->
+    <footer class="clear text-muted text-center">
+        Copyright &copy 2015 Tobin. All rights reserved.
+    </footer>
+
+    <script type="text/javascript" src="{% static 'lib/jquery/jquery-1.11.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'wotee/js/index.js' %}"></script>
+</body>
+</html>
